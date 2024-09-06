@@ -171,7 +171,7 @@ setcount(counter);
             className="text-sky-600 "
             to="https://https://github.com/techTenzen.com/"
           >
-            &nbsp; Github \ Rajesh{" "}
+            &nbsp; Github : Rajesh{" "}
           </Link>
         </div>
       </div>
