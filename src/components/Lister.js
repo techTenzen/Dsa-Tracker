@@ -151,20 +151,17 @@ setcount(counter);
           <Link
             target="_blank"
             className=" text-blue-700 font-nunito "
-            to="https://www.linkedin.com/in/Dev-chaitanya-tiwari-a30478200/"
+            to="https://www.linkedin.com/in/rajesh2603/"
           >
             {" "}
-            Dev Chaitanya tiwari &nbsp;
+            Rajesh Kumar Pradhan &nbsp;
           </Link>
 
-          <img
-            src="https://th.bing.com/th/id/R.1dde1bbff3a49d9a2d8e3ad315f9f137?rik=hx1P1nWyX7TYaw&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fheart-symbol-transparent%2fheart-symbol-transparent-7.png&ehk=tnXY15k5brhD0QZZmipdAq6M64XmIA6XDvtWxc1EXZA%3d&risl=&pid=ImgRaw&r=0"
-            className="w-6 h-6"
-          ></img>
+         
         </div>
         <div className="flex justify-center">
           {" "}
-          Made with Love | &nbsp;
+          Crafted for Learning and Growth | &nbsp;
           <img
             className="h-6 w-6"
             src="https://th.bing.com/th/id/R.968421ef5d794eb8cb555bb49dff4acd?rik=uxIlq%2bqiSDLTsA&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f1061%2f1924%2fproducts%2fStar_Emoji_grande.png%3fv%3d1480481043&ehk=1a3L6akK6vOPWmacDkHduTA1L5brh2me2a3w7ivd%2fHE%3d&risl=&pid=ImgRaw&r=0"
@@ -172,9 +169,9 @@ setcount(counter);
           <Link
             target="_blank"
             className="text-sky-600 "
-            to="https://github.com/Dct-tcd"
+            to="https://https://github.com/techTenzen.com/"
           >
-            &nbsp; Github \ Dct-tcd{" "}
+            &nbsp; Github \ Rajesh{" "}
           </Link>
         </div>
       </div>

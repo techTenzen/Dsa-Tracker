@@ -1,41 +1,81 @@
-import React, { useState } from 'react'
-import { Link, Router, Routes , Route } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Status from './Status';
-function Navbar({mode,setmode}) {
 
-    const [hidden1, sethidden1] = useState("hidden");
-    const handleClick = () => {
-      mode=="light" ? setmode("dark") : setmode("light");
-    }
+function Navbar({ mode, setmode }) {
+  const [hidden1, sethidden1] = useState("hidden");
 
-     
-    return (
+  const handleClick = () => {
+    mode === "light" ? setmode("dark") : setmode("light");
+  };
+
+  const navbarStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    backgroundColor: '#2d3748', // Dark gray background
+    padding: '10px 20px',
+    alignItems: 'center',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+  };
+
+  const linkStyle = {
+    color: '#f7fafc', // Light gray text
+    fontSize: '20px',
+    textDecoration: 'none',
+    margin: '0 10px',
+    padding: '5px 10px',
+    transition: 'color 0.3s, background-color 0.3s',
+  };
+
+  const linkHoverStyle = {
+    color: '#63b3ed', // Teal color on hover
+    backgroundColor: 'rgba(99, 179, 237, 0.1)',
+    borderRadius: '5px',
+  };
+
+  const iconContainerStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    cursor: 'pointer',
+    color: '#f7fafc',
+  };
+
+  const iconTextStyle = {
+    marginLeft: '10px',
+    fontSize: '18px',
+    fontWeight: 'bold',
+  };
+
+  return (
     <div>
-      <div className=' flex justify-between  bg-green-600 '>
-        <div 
-        className='text-gray-200 font-lg text-left hover:text-gray-200  m-3  h-8  '>
-
-        {/* <Link className='pr-2 text-teal-600' to="/"> Topics </Link> */}
-       {/* <Router>
-       <Routes>
-        <Route> */}
-               <Link className='pl-2 font-large   ' to="/"  > Dsa tracker </Link>
-       {/* </Route>
-       </Routes>
-       </Router> */}
-        
+      <div style={navbarStyle}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Link
+            to="/"
+            style={{ ...linkStyle, ...linkHoverStyle }}
+          >
+            Dsa Tracker
+          </Link>
         </div>
- <div className='flex align-bottom text-base pr-3 text-center  ' onClick={ ()=>{console.log(hidden1);hidden1=="hidden"?sethidden1("visible"):sethidden1("hidden")}} >
-        <img className='mt-1 w-8 h-9' src="bulb.png "></img>
-        <div className='text-gray-200  text-right  m-2 h-8 ' >
-           Hot Tip
+        <div
+          style={iconContainerStyle}
+          onClick={() => {
+            sethidden1(hidden1 === "hidden" ? "visible" : "hidden");
+          }}
+        >
+          <img
+            src="bulb.png"
+            alt="Hot Tip"
+            style={{ width: '32px', height: '32px', marginTop: '2px' }}
+          />
+          <div style={iconTextStyle}>
+            Hot Tip
+          </div>
         </div>
-        </div>
-        
       </div>
-      {<Status visi={hidden1} / >}
-      </div>
-  )
+      <Status visi={hidden1} />
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;
